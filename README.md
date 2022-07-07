@@ -1,3 +1,7 @@
+# RegressionVisualizer3D
+
+To install the package: `pip install -i https://test.pypi.org/simple/ RegressionVisualizer3D==1.0.1`
+
 This is a simple plotting package for visualizing linear regression, Poisson regression and binary logistic regression in 3D, for teaching purposes.
 
 The user supplies parameters for the data-generating process and a population of observations is created through those parameters. The population data consists of two continuous predictor variables and one outcome variable. The type of outcome variable depends on the type of regression model being visualized (continuous for linear regression, binary for logistic regression etc.)..
