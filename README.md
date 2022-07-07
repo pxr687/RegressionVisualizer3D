@@ -4,7 +4,7 @@ PyPI project: https://pypi.org/project/RegressionVisualizer3D/
 
 To install the package: `pip install RegressionVisualizer3D`
 
-Demonstration notebook is here: https://nbviewer.org/github/pxr687/RegressionVisualizer3D_demo/blob/main/0_intro_page.ipynb
+A notebook demonstrating the package is here: https://nbviewer.org/github/pxr687/RegressionVisualizer3D_demo/blob/main/0_intro_page.ipynb
 
 RegressionVisualizer3D is a simple plotting package for visualizing linear regression, Poisson regression and binary logistic regression in 3D, for teaching purposes.
 
