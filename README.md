@@ -19,8 +19,10 @@ A random sample (of a size specified by the user) is drawn from the population d
 * The sample data
 * The sample regression surface
 
-An optional regression table (with slopes and p-values etc.) is also shown, alongside the true regression equation used to generate the data.
+An optional regression table (with slopes and p-values etc.) is also shown, alongside the true regression equation used to generate the data. 
 
 To aid understanding, the user can also specify the names of the predictor variables and the outcome variable.
 
 If the user does not supply population parameters, defaults are used.
+
+*Note*: The package works best in a Jupyter notebook, where the markdown will display correctly.
