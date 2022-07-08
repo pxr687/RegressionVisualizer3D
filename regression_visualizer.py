@@ -291,12 +291,12 @@ def model_plot(model_type = 'linear_regression',
         # for the wireframe population regression surface
         x = _np.outer(_np.linspace(axis_size -(2 * axis_size), axis_size, 32), _np.ones(32))
         y = x.copy().T # transpose
-        z = _np.exp(intercept + predictor1_slope*x + predictor2_slope*y + interaction_slope*x*y).astype('int')
+        z = _np.exp(intercept + predictor1_slope*x + predictor2_slope*y + interaction_slope*x*y)
         
         # population datapoints
         pop_data_x = _np.random.choice(_np.linspace(axis_size -(2 * axis_size), axis_size, 32), size = population_size)
         pop_data_y = _np.random.choice(_np.linspace(axis_size -(2 * axis_size), axis_size, 32), size = population_size)
-        pop_data_z = _np.exp(intercept + predictor1_slope*pop_data_x + predictor2_slope*pop_data_y + interaction_slope*pop_data_x*pop_data_y + _np.random.normal(0, error_sd, size = population_size)).astype('int')
+        pop_data_z = _np.exp(intercept + predictor1_slope*pop_data_x + predictor2_slope*pop_data_y + interaction_slope*pop_data_x*pop_data_y + _np.random.normal(0, error_sd, size = population_size))
         
         # plot the population regression surface and data
         fig = _plt.figure(figsize = plot_size)
