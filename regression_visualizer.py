@@ -90,76 +90,93 @@ def model_plot(model_type = 'linear_regression',
                         verbose = True):
                         
     '''
-    This function generates a 3D visualization of several types of regression model.
-    It creates population data, based on parameters supplied as arguments. It then draws 
-    a random sample from that population data. A specific regression model (the type 
-    of which is specified by the `model_type' argument) is fit to the sample data.
+    This function generates a 3D visualization of several types of 
+    regression model. It creates population data, based on parameters 
+    supplied as arguments. It then draws a random sample from that 
+    population data. A regression model is then fit to the sample data.
+    The type of regression model which is fit is specified by the 
+    `model_type' argument
     
-    The regression surfaces and the data are then shown on 3D plots, for the population and 
-    the sample data. By default, explanations of what the function is doing/showing are
-    displayed for the user.
+    The regression surfaces and the data are then shown on 3D plots, for
+    the population and the sample data. By default, explanations of 
+    what the function is doing/showing are displayed for the user, via
+    Markdown printouts.
     
-    The user can set all of the parameters, BUT some combinations may cause computational
-    errors, depending on the type of regression model.
+    The user can set all of the parameters, BUT some combinations may 
+    cause computational errors, depending on the type of regression 
+    model.
     
     Parameters
     ----------
     
     model_type: a string specified the type of regression model 
-    to be visualized. Must be one of 'linear_regression', 'poisson_regression'
-    or 'binary_logistic_regression'
+    to be visualized. Must be one of 'linear_regression', 
+    'poisson_regression' or 'binary_logistic_regression'
     
-    intercept: the intercept to be used in the population data generating process. 
-    Default is 1.
+    intercept: the intercept to be used in the population data
+    generating process. Default is 1.
     
-    predictor1_slope: the slope of the first predictor, to be used in the population 
-    data generating process. Default is None, but if None is a supplied a default
-    will be chosen based on model_type.
+    predictor1_slope: the slope of the first predictor, to be used in 
+    the population data generating process. Default is None, but if 
+    None is a supplied a default will be chosen based on model_type.
     
-    predictor2_slope: the slope of the second predictor, to be used in the population 
-    data generating process. Default is None, but if None is a supplied a default
-    will be chosen based on model_type.
-                       
-    interaction_slope: the slope of the interaction between the two predictors 
-    to be used in the population data generating process. Default is None, but if None 
+    predictor2_slope: the slope of the second predictor, to be used in 
+    the population data generating process. Default is None, but if None
     is a supplied a default will be chosen based on model_type.
                        
-    sample_size: an integer setting the size of the random sample, drawn from the population 
-    data. Default is 100
+    interaction_slope: the slope of the interaction between the two 
+    predictors to be used in the population data generating process. 
+    Default is None, but if None is a supplied a default will be chosen 
+    based on model_type.
                        
-    population_size: an integer setting the size of the population. Default is 1000.
+    sample_size: an integer setting the size of the random sample, 
+    drawn from the population data. Default is 100
                        
-    error_sd: the standard deviation of the error added to the population regression equation
-    used in the data generating process. Default is None, but if None is a supplied a default
-    will be chosen based on model_type.
+    population_size: an integer setting the size of the population. 
+    Default is 1000.
                        
-    predictor1_name: a string setting the name of the first predictor. Default is 'Predictor 1'.
+    error_sd: the standard deviation of the error added to the 
+    population regression equation used in the data generating process. 
+    Default is None, but if None is a supplied a default will be 
+    chosen based on model_type.
                        
-    predictor2_name: a string setting the name of the second predictor. Default is 'Predictor 2'.
+    predictor1_name: a string setting the name of the first predictor. 
+    Default is 'Predictor 1'.
                        
-    outcome_variable_name:  a string setting the name of the outcome variable. Default is 'Outcome Variable'.
+    predictor2_name: a string setting the name of the second predictor. 
+    Default is 'Predictor 2'.
+                       
+    outcome_variable_name:  a string setting the name of the outcome 
+    variable. Default is 'Outcome Variable'.
       
-    axis_size: a number setting the axis dimensions (min = axis_size -(2*axis_size), max = axis_size). Default is 3.
+    axis_size: a number setting the axis dimensions 
+    (min = axis_size -(2*axis_size), max = axis_size). Default is 3.
                        
-    show_statsmodels: a Boolean, if True, the regression table from the regression model fit to the sample data
-    will be shown.
+    show_statsmodels: a Boolean, if True, the regression table from 
+    the regression model fit to the sample data will be shown.
                        
-    legend_loc: a string setting the location to display the figure legend. Default is 'lower center'.
+    legend_loc: a string setting the location to display the figure 
+    legend. Default is 'lower center'.
                        
-    view_angle: a number setting the view angle for the graphs. Default is None, which will use the 
-    matplotlib default.
+    view_angle: a number setting the view angle for the graphs. Default 
+    is None, which will use the matplotlib default.
                         
-    view_elevation: a number setting the view elevation for the graphs. Default is None, which will 
-    use the matplotlib default.
+    view_elevation: a number setting the view elevation for the graphs. 
+    Default is None, which will use the matplotlib default.
                         
     plot_size: a tuple setting the figure size. Default is (16,8).
                         
-    data_alpha: a number between 0 and 1, setting the see-through-ness of the datapoints on the graphs. Default is 1 (opaque).
+    data_alpha: a number between 0 and 1, setting the see-through-ness 
+    of the datapoints on the graphs. Default is 1 (opaque).
                         
-    surface_alpha: a number between 0 and 1, setting the see-through-ness of the regression surfaces on the graphs. Default is  0.7
+    surface_alpha: a number between 0 and 1, setting the 
+    see-through-ness of the regression surfaces on the graphs. 
+    Default is  0.7
                         
-    verbose: a Boolean. If True an explanation of what the function is doing will be displayed alongside the graphs. The true 
-    regression equation used in the data generating process will also be shown.
+    verbose: a Boolean. If True an explanation of what the function 
+    is doing will be displayed alongside the graphs (via Markdown 
+    printouts). The true regression equation used in the 
+    data generating process will also be shown.
     
     Returns
     -------
