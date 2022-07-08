@@ -1,6 +1,6 @@
 RegressionVisualizer3D is a simple single-function plotting package for visualizing linear regression, Poisson regression and binary logistic regression in 3D, for teaching purposes.
 
-A notebook demonstrating the package is here: https://nbviewer.org/github/pxr687/RegressionVisualizer3D_demo/blob/main/0_intro_page.ipynb
+A notebook demonstrating the package is here: https://nbviewer.org/github/pxr687/RegressionVisualizer3D_demo/blob/main/RV3D_demo.ipynb
 
 The user supplies parameters for the data-generating process and a population of observations is created through those parameters. The population data consists of two continuous predictor variables and one outcome variable. The type of outcome variable depends on the type of regression model being visualized (continuous for linear regression, binary for logistic regression etc.)..
 
